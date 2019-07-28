@@ -9,10 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var weatherTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        weatherTableView.register(UINib(nibName: "WeatherTableViewCell", bundle: nil), forCellReuseIdentifier: "WeatherCell")
     }
 
 
